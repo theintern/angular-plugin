@@ -1,23 +1,37 @@
 {
-  "name": "@theintern/angular-plugin",
-  "version": "1.0.0",
-  "description": "Intern plugin for testing Angular 4",
-  "main": "dist/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "BSD-3-Clause",
-  "devDependencies": {
-    "tslint": "^5.5.0",
-    "typescript": "^2.4.1"
-  },
-  "dependencies": {
-    "@angular/core": "^4.3.0",
-    "@angular/platform-browser-dynamic": "^4.3.0",
-    "@types/systemjs": "^0.20.2",
-    "intern": "^4.0.0-alpha.10",
-    "rxjs": "^5.4.2",
-    "tslib": "^1.7.1"
-  }
+	"name": "@theintern/angular-plugin",
+	"version": "1.0.0",
+	"description": "Intern plugin for testing Angular 4",
+	"main": "index.js",
+	"scripts": {
+		"build": "intern-dev-clean && intern-dev-build",
+		"clean": "intern-dev-clean",
+		"lint": "intern-dev-lint",
+		"test": "NODE_PATH=_build intern",
+		"watch": "intern-dev-build watch"
+	},
+	"author": "",
+	"license": "BSD-3-Clause",
+	"devDependencies": {
+		"@angular/core": "^4.2.4",
+		"@angular/common": "^4.2.4",
+		"@angular/compiler": "^4.2.4",
+		"@angular/platform-browser": "^4.2.4",
+		"@angular/platform-browser-dynamic": "^4.2.4",
+		"@theintern/dev": "~0.5.8",
+		"@types/systemjs": "^0.20.2",
+		"intern": "~4.0.0-alpha.15",
+		"rxjs": "^5.4.2",
+		"zone.js": "^0.8.14"
+	},
+	"peerDependencies": {
+		"@angular/core": "^4.2.4",
+		"@angular/common": "^4.2.4",
+		"@angular/compiler": "^4.2.4",
+		"@angular/platform-browser": "^4.2.4",
+		"@angular/platform-browser-dynamic": "^4.2.4",
+		"intern": "~4.0.0-alpha.15",
+		"rxjs": "^5.4.2",
+		"zone.js": "^0.8.14"
+	}
 }
